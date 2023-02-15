@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruby on Rails</title>
+  </head>
+  <body>
+    <h2>Produtos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @products.each do |product|%>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.description %></td>
+          <td><%= product.price %></td>
+          <td><%= product.amount %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <h2>Produto em promoção</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @discount_product.each do |product|%>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.description %></td>
+          <td><%= product.price %></td>
+          <td><%= product.amount %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </body>
+</html>
